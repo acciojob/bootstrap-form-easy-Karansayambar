@@ -10,48 +10,63 @@
 <body>
 	<!-- the entire body must be written by student -->
 	<div class="container">
-		<form>
-			<h1>Internship Form</h1>
-		<div class="d-flex">
-			<div class="col-lg-4">
-				<label class="form-control" for="first-name-input">First Name</label>
-			    <input type="text" id="first-name-input" required>
-			</div>
-			<div class="col-lg-4 px-3">
-				<label class="form-control" for="last-name-input">Last Name</label>
-			    <input type="text" id="last-name-input" required>
-			</div>
-			<div class="col-lg-4">
-				<label class="form-control" for="email-input">Email Address</label>
-			    <input type="email" id="email-input" placeholder="xyz@abc.com" required>
-			</div>
-		</div>
-		<div class="d-flex">
-			<div class="col-lg-6">
-				<label for="college-input">Collage</label> <br>
-				<input type="text" id="college-input" required>
-			</div>
-			<div class="col-lg-4">
-				<label for="conditions-checkbox">Graduation Year</label>
-				<select id="conditions-checkbox">
-					<option>Choose...</option>
-					<option>2020</option>
-					<option>2021</option>
-					<option>2022</option>
-					<option>2023</option>
-				</select>
-			</div>
-			<div class="col-lg-4">
-				<label for="roll-no-input">Roll No</label>
-				<input type="text" id="roll-no-input" required>
-			</div>
-		</div>
-		<div>
-			<input type="checkbox" id="conditions-checkbox" required>
-		<label for="conditions-checkbox">Agree to terms and conditions</label>
-		</div>
-		<button>Submit Form</button>
-		</form>
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+  <style>
+    .invalid-feedback {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm" action="#" method="post">
+    <label for="first-name-input">First Name:</label>
+    <input type="text" id="first-name-input" name="first-name" required>
+    <div class="invalid-feedback">Please fill in your first name.</div>
+
+    <label for="last-name-input">Last Name:</label>
+    <input type="text" id="last-name-input" name="last-name" required>
+    <div class="invalid-feedback">Please fill in your last name.</div>
+
+    <label for="email-input">Email:</label>
+    <input type="email" id="email-input" name="email" required>
+    <div class="invalid-feedback">Please enter a valid email address.</div>
+
+    <label for="college-input">College Name:</label>
+    <input type="text" id="college-input" name="college" required>
+    <div class="invalid-feedback">Please fill in the name of your college.</div>
+
+    <label for="graduation-year-input">Graduation Year:</label>
+    <select id="graduation-year-input" name="graduation-year" required>
+      <option value="" disabled selected>Choose...</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+    </select>
+    <div class="invalid-feedback">Please select your graduation year.</div>
+
+    <label for="roll-no-input">Roll No:</label>
+    <input type="text" id="roll-no-input" name="roll-no" required>
+    <div class="invalid-feedback">Please fill in your roll number.</div>
+
+    <label>
+      <input type="checkbox" id="conditions-checkbox" name="conditions" required>
+      I agree to the terms and conditions
+    </label>
+    <div class="invalid-feedback">Please agree to the terms and conditions.</div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
+
 	</div>
     <script type="text/javascript" src="./script.js">
 </script>
